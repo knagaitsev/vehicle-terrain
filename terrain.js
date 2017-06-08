@@ -42,9 +42,9 @@ TerrainController = function(game, x1, x2, y1, y2) {
 
     var terrain = this.generateTerrain(this.leftBound, this.rightBound,
         this.topBound, this.bottomBound);
+    //flip the terrain to match Phaser's coordinate system
     terrain = this.flipTerrain(terrain, this.topBound, this.bottomBound);
     this.vertices = this.vertices.concat(terrain);
-
 }
 
 TerrainController.prototype = {
